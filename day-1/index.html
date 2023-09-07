@@ -27,6 +27,15 @@
       //   </>
       // );
       //? contoh 2
+      function Header({ contoh }) {
+        return (
+          <h1>
+            {" "}
+            ini versi menggunakan function {contoh ? contoh : "komponen"}🚀
+          </h1>
+        );
+      }
+
       function HomePage() {
         const students = [
           { id: 1, name: "fachry" },
@@ -53,14 +62,6 @@
             <Main />
             <Footer />
           </>
-        );
-      }
-      function Header({ contoh }) {
-        return (
-          <h1>
-            {" "}
-            ini versi menggunakan function {contoh ? contoh : "komponen"}🚀
-          </h1>
         );
       }
 
