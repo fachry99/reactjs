@@ -28,17 +28,33 @@
       // );
       //? contoh 2
       function HomePage() {
+        const students = [
+          { id: 1, name: "fachry" },
+          { id: 2, name: "kelfin" },
+          { id: 3, name: "guing" },
+          { id: 4, name: "ilham" },
+          { id: 5, name: "ilham" },
+        ];
         return (
           <div>
-            <Header cth="basic" />
-            <Header cth2="komponen 1" />
+            <Header contoh="Props Refactor" />
+            <ul>
+              {students.map((student) => (
+                <li key={student.id}>{student.name}</li>
+              ))}
+            </ul>
             <Main />
             <Footer />
           </div>
         );
       }
-      function Header(props) {
-        return <h1> ini versi menggunakan function {props.cth2}🚀</h1>;
+      function Header({ contoh }) {
+        return (
+          <h1>
+            {" "}
+            ini versi menggunakan function {contoh ? contoh : "komponen"}🚀
+          </h1>
+        );
       }
 
       function Main() {
