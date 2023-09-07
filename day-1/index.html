@@ -13,18 +13,48 @@
     <div id="root"></div>
     <script type="text/babel">
       const containerccv = document.getElementById("root");
-      const root = ReactDOM.createRoot(container);
+      const root = ReactDOM.createRoot(containerccv);
       // root.render(<h1>Belajar react 🚀</h1>); // method render() hanya bisa dipanggil sekali
-      root.render(
-        <>
-          <h1>Belajar react 🚀</h1>
-          <img src="logo-reactjs.png" alt="gambar logo" />
-          <p>
-            contoh kalo mau bikin tag lebih satu harus dibungkus dengan tag
-            kosong
-          </p>
-        </>
-      );
+      //? contoh 1
+      // root.render(
+      //   <>
+      //     <h1>Belajar react 🚀</h1>
+      //     <img src="logo-reactjs.png" alt="gambar logo" />
+      //     <p>
+      //       contoh kalo mau bikin tag lebih satu harus dibungkus dengan tag
+      //       kosong
+      //     </p>
+      //   </>
+      // );
+      //? contoh 2
+      function HomePage() {
+        return (
+          <div>
+            <Header cth="basic" />
+            <Header cth2="komponen 1" />
+            <Main />
+            <Footer />
+          </div>
+        );
+      }
+      function Header(props) {
+        return <h1> ini versi menggunakan function {props.cth2}🚀</h1>;
+      }
+
+      function Main() {
+        return (
+          <div>
+            <p>ini versi menggunakan function🚀</p>
+            <img src="logo-reactjs.png" alt="gambar logo" />
+          </div>
+        );
+      }
+
+      function Footer() {
+        return <p>Fachry 7 September 2023</p>;
+      }
+
+      root.render(<HomePage />);
     </script>
   </body>
 </html>
