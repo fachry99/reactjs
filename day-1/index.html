@@ -35,17 +35,24 @@
           { id: 4, name: "ilham" },
           { id: 5, name: "ilham" },
         ];
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+
         return (
-          <div>
+          <>
             <Header contoh="Props Refactor" />
             <ul>
               {students.map((student) => (
                 <li key={student.id}>{student.name}</li>
               ))}
             </ul>
+            <button onClick={handleClick}>like ({likes})</button>
             <Main />
             <Footer />
-          </div>
+          </>
         );
       }
       function Header({ contoh }) {
