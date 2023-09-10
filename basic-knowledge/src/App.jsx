@@ -4,14 +4,25 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const age = 20;
-  const isGreen = true;
+  const planets = [
+    { name: "mars", isGasPlanet: false },
+    { name: "earth", isGasPlanet: false },
+    { name: "jupiter", isGasPlanet: true },
+    { name: "venus", isGasPlanet: false },
+    { name: "neptune", isGasPlanet: true },
+    { name: "uranus", isGasPlanet: true },
+  ];
   return (
-    <div>
-      {age > 18 ? <h2>Anda sudah dewasa</h2> : <h2>Anda masih anak-anak</h2>}
-      <h2 style={{ color: isGreen ? "green" : "red" }}>Flag</h2>
-      {isGreen && <button>Click me</button>}{" "}
-      {/* if isGreen is true, then render the button */}
+    <div className="App">
+      {planets.map((planet, key) => {
+        if (planet.isGasPlanet) return <h1>{planet.name}</h1>; // will display only gas planets
+
+        // versi  terpendek
+        planet.isGasPlanet && <h1>{planet.name}</h1>; // will display only gas planets
+
+        // versi  pendek untuk menampilkan non-gas planets
+        //planet.isGasPlanet || <h1>{planet.name}</h1>; // will display only non-gas planets
+      })}
     </div>
   );
 }
