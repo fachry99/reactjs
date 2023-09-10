@@ -1,27 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const nama = <h1>ME 👩‍💻</h1>;
+  const age = 20;
+  const isGreen = true;
   return (
-    <>
-      <h1>Hello, world! from {nama}</h1>
-      <Job salary="Fachry" position={20} company="151fachry@gmail.com" />
-      <Job salary="kelfin" position={21} company="kelfin@gmail.com" />
-      <Job salary="kelfin" position={21} company="kelfin@gmail.com" />
-    </>
+    <div>
+      {age > 18 ? <h2>Anda sudah dewasa</h2> : <h2>Anda masih anak-anak</h2>}
+      <h2 style={{ color: isGreen ? "green" : "red" }}>Flag</h2>
+      {isGreen && <button>Click me</button>}{" "}
+      {/* if isGreen is true, then render the button */}
+    </div>
   );
 }
-
-const Job = (props) => {
-  return (
-    <>
-      <h1>{props.salary}</h1>
-      <h2>{props.position}</h2>
-      <h2>{props.company}</h2>
-    </>
-  );
-};
 
 export default App;
