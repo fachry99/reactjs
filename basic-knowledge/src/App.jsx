@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 function App() {
@@ -5,18 +7,19 @@ function App() {
   return (
     <>
       <h1>Hello, world! from {nama}</h1>
-      <User name="Fachry" age={20} email="151fachry@gmail.com" />
-      <User name="kelfin" age={21} email="kelfin@gmail.com" />
+      <Job salary="Fachry" position={20} company="151fachry@gmail.com" />
+      <Job salary="kelfin" position={21} company="kelfin@gmail.com" />
+      <Job salary="kelfin" position={21} company="kelfin@gmail.com" />
     </>
   );
 }
 
-const User = (props) => {
+const Job = (props) => {
   return (
     <>
-      <h1>{props.name}</h1>
-      <h2>{props.age}</h2>
-      <h2>151fachry@gmail.com</h2>
+      <h1>{props.salary}</h1>
+      <h2>{props.position}</h2>
+      <h2>{props.company}</h2>
     </>
   );
 };
