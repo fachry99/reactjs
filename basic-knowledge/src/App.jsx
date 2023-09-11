@@ -4,25 +4,14 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const planets = [
-    { name: "mars", isGasPlanet: false },
-    { name: "earth", isGasPlanet: false },
-    { name: "jupiter", isGasPlanet: true },
-    { name: "venus", isGasPlanet: false },
-    { name: "neptune", isGasPlanet: true },
-    { name: "uranus", isGasPlanet: true },
-  ];
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      {planets.map((planet, key) => {
-        if (planet.isGasPlanet) return <h1>{planet.name}</h1>; // will display only gas planets
-
-        // versi  terpendek
-        planet.isGasPlanet && <h1>{planet.name}</h1>; // will display only gas planets
-
-        // versi  pendek untuk menampilkan non-gas planets
-        //planet.isGasPlanet || <h1>{planet.name}</h1>; // will display only non-gas planets
-      })}
+    <div>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
+      <button onClick={() => setCount(0)}>Set To zero</button>
+      {count}
     </div>
   );
 }
