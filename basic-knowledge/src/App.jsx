@@ -20,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
+        <footer>footer akan statis walaupun pindah page</footer>
       </Router>
     </div>
   );
