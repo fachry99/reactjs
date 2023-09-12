@@ -1,18 +1,25 @@
 // eslint-disable-next-line no-unused-vars
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-
-fetch("https://catfact.ninja/fact").then((response) =>
-  response.json().then((data) => {
-    console.log(data);
-  })
-);
+import axios from "axios";
 
 function App() {
+  const [catFact, setCatFact] = useState("");
+
+  const fetchCatFact = () => {
+    axios.get("https://catfact.ninja/fact").then((response) => {
+      setCatFact(response.data.fact);
+    });
+  };
+
+  useEffect(() => {
+    fetchCatFact();
+  }, []);
+
   return (
     <div className="App">
-      <button>Generate Cat Fact</button>
-      <p></p>
+      <button onClick={fetchCatFact}>Generate Cat Fact</button>
+      <p>{catFact}</p>
     </div>
   );
 }
