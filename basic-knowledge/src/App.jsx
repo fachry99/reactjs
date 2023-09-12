@@ -1,27 +1,26 @@
 // eslint-disable-next-line no-unused-vars
-import { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Menu } from "./pages/Menu";
+import { Contact } from "./pages/Contact";
 
 function App() {
-  const [generatedExcuse, setGeneratedExcuse] = useState("");
-
-  const fetchExcuse = (excuse) => {
-    axios
-      .get(`https://excuser-three.vercel.app/v1/excuse/${excuse}/`)
-      .then((response) => {
-        setGeneratedExcuse(response.data[0].excuse);
-      });
-  };
-
   return (
     <div className="App">
-      <h1>Generate An Excuse</h1>
-      <button onClick={() => fetchExcuse("party")}>Party</button>
-      <button onClick={() => fetchExcuse("family")}>Family</button>
-      <button onClick={() => fetchExcuse("office")}>Office</button>
-
-      <h1>{generatedExcuse}</h1>
+      <Router>
+        <div>
+          <Link to="/">Home</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<h1>404 Page Not Found</h1>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
