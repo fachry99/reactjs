@@ -1,27 +1,30 @@
 // eslint-disable-next-line no-unused-vars
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Menu } from "./pages/Menu";
+import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
+import { Navbar } from "./Navbar";
+import { useState, createContext } from "react";
+
+export const AppContext = createContext();
 
 function App() {
+  const [userName, setUserName] = useState("Fachry");
+
   return (
     <div className="App">
-      <Router>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu/:id" element={<Menu />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<h1>404 Page Not Found</h1>} />
-        </Routes>
-        <footer>footer akan statis walaupun pindah page</footer>
-      </Router>
+      <AppContext.Provider value={{ userName, setUserName }}>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
+          </Routes>
+        </Router>
+      </AppContext.Provider>
     </div>
   );
 }
