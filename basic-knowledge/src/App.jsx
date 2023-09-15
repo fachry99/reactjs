@@ -17,6 +17,9 @@ function App() {
       },
     },
   });
+  {
+    /* this is used to stop the refetching of the data when the window is in focus*/
+  }
   return (
     <div className="App">
       <QueryClientProvider client={client}>
