@@ -29,13 +29,3 @@ body {
   padding-top: 50px;
   flex-direction: column;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-p {
-  color: red;
-}
