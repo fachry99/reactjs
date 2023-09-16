@@ -1,22 +1,17 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useToggle } from "./useToggle";
+import { useCounter } from "./useCounter";
 
 function App() {
-  const [isVisible, toggle] = useToggle();
-  const [isVisible2, toggle2] = useToggle();
+  const [count, increment, decrement, reset] = useCounter(40);
+
   return (
     <div className="App">
-      <button className="btn btn-primary" onClick={toggle}>
-        {isVisible ? "Hide" : "Show"}
-      </button>
-      {isVisible && <h1>Hidden text here</h1>}
-
-      <button className="btn btn-secondary" onClick={toggle2}>
-        {isVisible2 ? "Hide" : "Show"}
-      </button>
-      {isVisible2 && <h1>Hidden text here</h1>}
+      {count}
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
