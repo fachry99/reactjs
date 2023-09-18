@@ -1,4 +1,4 @@
-import { Form } from "./Components/Form";
+import { Form } from "../components/form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Home = () => {
