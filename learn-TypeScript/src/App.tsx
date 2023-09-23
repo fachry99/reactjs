@@ -1,19 +1,10 @@
 import "./App.css";
-import { Person, Country } from "./components/Person";
+
+import React from "react-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <Person
-        name="Fachry"
-        age={20}
-        hobbies={["Coding", " Gaming"]}
-        isMarried={false}
-        friends={["Anton", "Bayu", "Cahya"]}
-        country={Country.Indonesia}
-      />
-    </div>
-  );
+  const name: string = "Josh Perez";
+  return <div className="app">{name}</div>;
 }
 
 export default App;
