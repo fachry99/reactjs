@@ -1,5 +1,6 @@
 import "./App.css";
-import FocusInput from "./components/FocusInput";
+import FRParentInput from "./components/FRParentInput";
+// import FocusInput from "./components/FocusInput";
 // import ReftDemo from "./components/ReftDemo";
 // import FragmentDemo from "./components/FragmentDemo";
 // import Tables from "./components/Tables";
@@ -8,7 +9,8 @@ import FocusInput from "./components/FocusInput";
 function App() {
   return (
     <div className="App">
-      <FocusInput />
+      <FRParentInput />
+      {/* <FocusInput /> */}
       {/* <ReftDemo /> */}
       {/* <ParentComponent /> */}
       {/* <Tables /> */}
