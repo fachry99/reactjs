@@ -1,20 +1,22 @@
 import "./App.css";
-import FRParentInput from "./components/FRParentInput";
-// import FocusInput from "./components/FocusInput";
-// import ReftDemo from "./components/ReftDemo";
-// import FragmentDemo from "./components/FragmentDemo";
-// import Tables from "./components/Tables";
-// import ParentComponent from "./components/ParentComponent";
+import ErrorBoundry from "./components/ErrorBoundry";
+import Hero from "./components/Hero";
+// import PortalDemo from "./components/PortalDemo";
 
 function App() {
   return (
     <div className="App">
-      <FRParentInput />
-      {/* <FocusInput /> */}
-      {/* <ReftDemo /> */}
-      {/* <ParentComponent /> */}
-      {/* <Tables /> */}
-      {/* <FragmentDemo /> */}
+      <ErrorBoundry>
+        <Hero heroName="Batman" />
+      </ErrorBoundry>
+      <ErrorBoundry>
+        <Hero heroName="Superman" />
+      </ErrorBoundry>
+      <ErrorBoundry>
+        <Hero heroName="Joker" />
+      </ErrorBoundry>
+
+      {/* <PortalDemo /> */}
     </div>
   );
 }
