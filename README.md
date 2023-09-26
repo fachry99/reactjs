@@ -3,6 +3,8 @@
 <h3>Resource learning: <a href="https://youtu.be/f55qeKGgB_M?si=y9hhl8Ld2Et2UOC-">PedroTech</a></h3>
 
 <p><a href="https://github.com/fachry99/reactjs/tree/main">Main</a>: awal-awal pengenalan react sampe useEffects</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode1">Episode1</a>: Try component with function, Class, and event Handler, ParentChild Component, List & key (Rendering)</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode2">Episode2</a>: Learn Fragments, Pure Component, Memo, Ref</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode7">Episode7</a>: Learn Fetching Data From API's</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode8">Episode8</a>: Learn React Router DOM</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode9">Episode9</a>: Learn React State Management, useContext Hook</p>
