@@ -14,8 +14,14 @@ class ClassCounterOne extends Component {
     document.title = `Clicked ${this.state.count} times`;
   }
   render() {
-
-    return <div><button onClick={() => this.setState({count: this.state.count + 1})}> Click {this.state.count} Times</button></div>;
+    return (
+      <div>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          {" "}
+          Class {this.state.count} Times
+        </button>
+      </div>
+    );
   }
 }
 
