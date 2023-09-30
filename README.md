@@ -6,6 +6,9 @@
 <p><a href="https://github.com/fachry99/reactjs/tree/main">Main</a>: awal-awal pengenalan react sampe useEffects</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode1">Episode1</a>: Try component with function, Class, and event Handler, ParentChild Component, List & key (Rendering)</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode2">Episode2</a>: Learn Fragments, Pure Component, Memo, Ref</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode3">Episode3</a>: Learn useEffect, Custom Hooks</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode4">Episode4</a>: Learn useEffect with array & Work after render, useEffect with cleanup code, useEffect with incorect dependency</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode5">Episode5</a>: Learn fetchdata with axios, useContext hooks</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode7">Episode7</a>: Learn Fetching Data From API's</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode8">Episode8</a>: Learn React Router DOM</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode9">Episode9</a>: Learn React State Management, useContext Hook</p>
