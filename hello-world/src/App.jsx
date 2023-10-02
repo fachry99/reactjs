@@ -1,12 +1,10 @@
 import "./App.css";
-import Counter from "./components/Counter";
-// import ParentComponent from "./components/ParentComponent";
+import FocusInput from "./components/FocusInput";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
-      {/* <ParentComponent /> */}
+      <FocusInput />
     </div>
   );
 }
