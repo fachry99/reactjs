@@ -10,6 +10,7 @@
 <p><a href="https://github.com/fachry99/reactjs/tree/episode4">Episode4</a>: Learn useEffect with array & Work after render, useEffect with cleanup code, useEffect with incorect dependency</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode5">Episode5</a>: Learn fetchdata with axios, useContext hooks</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode5A">Episode5A</a>: Learn useReducer hooks</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode6">Episode6</a>: all about useReducer & useMemo </p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode7">Episode7</a>: Learn Fetching Data From API's</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode8">Episode8</a>: Learn React Router DOM</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode9">Episode9</a>: Learn React State Management, useContext Hook</p>
@@ -18,3 +19,5 @@
 <p><a href="https://github.com/fachry99/reactjs/tree/episode12">Episode12</a>: Learn React Custom Hooks</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode12-latihan">Episode12-latihan</a>: latihan buat perhitungan dengan custom hooks</p>
 <p><a href="https://github.com/fachry99/reactjs/tree/episode13">Episode13</a>: Learn TypeScript in react (first try😍)</p>
+<p><a href="https://github.com/fachry99/reactjs/tree/episode16">Episode16</a>: Learn UseRef Hooks</p>
+
