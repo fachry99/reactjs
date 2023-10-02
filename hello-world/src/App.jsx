@@ -1,12 +1,16 @@
 import "./App.css";
-import DocTitleOne from "./components/DocTitleOne";
-import DocTitleTwo from "./components/DocTitleTwo";
+import CounterOne from "./components/CounterOne";
+import CounterTwo from "./components/CounterTwo";
+// import DocTitleOne from "./components/DocTitleOne";
+// import DocTitleTwo from "./components/DocTitleTwo";
 
 function App() {
   return (
     <div className="App">
-      <DocTitleTwo />
-      <DocTitleOne />
+      <CounterTwo />
+      <CounterOne />
+      {/* <DocTitleTwo />
+      <DocTitleOne /> */}
     </div>
   );
 }
